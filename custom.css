@@ -1,0 +1,37 @@
+.page-main {
+    width: 40%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    text-align: center;
+}
+
+.players {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.game {
+    margin: 0 auto;
+}
+
+.field__item {
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    /*outline: none;*/
+}
+
+th, td {
+    border: 1px solid #ddd;
+}
+
+@media (max-width: 900px) {
+    .page-main {
+        width: 70%;
+    }
+}
