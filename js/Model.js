@@ -27,6 +27,9 @@ class Model {
                 break;
             }
         }
+        if (this._amountStrep === 9) {
+            this.winPlayer['namePlayer'] = 'nobody';
+        }
     }
 
     set movePlayer (step) {
