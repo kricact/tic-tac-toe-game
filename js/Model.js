@@ -38,7 +38,7 @@ class Model {
         this.checkWin(step['player']);
     }
 
-    get Pl () {
+    get winPlayer () {
         return this.winPlayer;
     }
 }
