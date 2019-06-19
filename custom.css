@@ -46,14 +46,18 @@ th, td {
 
 .end-game {
     display: none;
+    padding-top: 40px;
     width: 300px;
     height: 200px;
     position: absolute;
     left: 40%;
-    top: 40%;
+    top: 20%;
+
+    font-size: 24px;
     background-color: rgba(93, 123, 145, 0.9);
     text-align: center;
     color: white;
+
 }
 
 .end-game-show {
