@@ -5,7 +5,7 @@ class Controller {
         //create view
         this.view = new View(this.model);
         //subscribe on changing model - win player
-        this.model.subscribe(() => this.view.showEndNotification());
+        this.model.subscribe((winPlayer) => this.view.showEndNotification(winPlayer['namePlayer']));
         //update model, if smb make step
         this.view.onPlayerMove = (step) => this.model.movePlayer = step;
     }
