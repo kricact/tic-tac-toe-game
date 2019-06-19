@@ -20,7 +20,7 @@ class Model {
 
     notifyLictenrs() {
         for (const listener of this.listeners) {
-            listener(this);
+            listener(this.winPlayer);
         }
     }
 
@@ -42,7 +42,7 @@ class Model {
                 break;
             }
         }
-        if (this._amountStrep === 9) {
+        if (this._amountStrep === 9 && this.winPlayer['namePlayer'] === 'unknown') {
             this.winPlayer['namePlayer'] = 'nobody';
             this.notifyLictenrs();
         }
