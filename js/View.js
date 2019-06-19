@@ -6,8 +6,22 @@ class View {
         this.currentPlayer = this._firstPlayer;
     }
 
-    showEndNotification() {
-        alert('Кто-то win');
+    showEndNotification(winPlayer) {
+        console.log(winPlayer);
+        let textEnd = document.querySelector('.end-game__words');
+        switch (winPlayer) {
+            case 'nobody':
+                textEnd.textContent = 'Ничья';
+                break;
+            case this._firstPlayer:
+                textEnd.textContent = `Победа игрока - X`;
+                break;
+            case this._secondPlayer:
+                textEnd.textContent = `Победа игрока - O`;
+                break;
+        }
+        let popupEnd = document.querySelector('.end-game');
+        popupEnd.classList.add('end-game-show');
     }
 
 
@@ -19,8 +33,8 @@ class View {
         this._field.forEach((currentValue, i) => {
             currentValue.addEventListener('click', ()=> {
                 this.updateField(currentValue, this.currentPlayer);
-                this.changePlayer();
                 this.onPlayerMove({'id':i, 'player':this.currentPlayer});
+                this.changePlayer();
             });
         });
 
