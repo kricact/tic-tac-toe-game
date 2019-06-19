@@ -35,3 +35,11 @@ th, td {
         width: 70%;
     }
 }
+
+.playerX {
+    background-image: url("img/cross.svg");
+}
+
+.playerO {
+    background-image: url("img/circle.svg");
+}
