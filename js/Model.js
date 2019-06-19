@@ -1,6 +1,7 @@
 'use strict';
 class Model {
     constructor () {
+        this._initialField = [0, 0, 0, 0, 0, 0, 0, 0, 0];
         this.field = [0, 0, 0, 0, 0, 0, 0, 0, 0];
         this._amountStrep = 0;
         this.winPlayer = {
