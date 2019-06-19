@@ -4,6 +4,7 @@
     margin: 0 auto;
     flex-direction: column;
     text-align: center;
+    position: relative;
 }
 
 .players {
@@ -47,11 +48,11 @@ th, td {
 .end-game {
     display: none;
     padding-top: 40px;
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    height: 250px;
     position: absolute;
-    left: 40%;
-    top: 20%;
+    left: 0;
+    top: 70px;
 
     font-size: 24px;
     background-color: rgba(93, 123, 145, 0.9);
