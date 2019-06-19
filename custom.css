@@ -43,3 +43,19 @@ th, td {
 .playerO {
     background-image: url("img/circle.svg");
 }
+
+.end-game {
+    display: none;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    background-color: rgba(93, 123, 145, 0.9);
+    text-align: center;
+    color: white;
+}
+
+.end-game-show {
+    display: block;
+}
