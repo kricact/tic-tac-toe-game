@@ -8,6 +8,8 @@ class Controller {
         this.model.subscribe((winPlayer) => this.view.showEndNotification(winPlayer['namePlayer']));
         //update model, if smb make step
         this.view.onPlayerMove = (step) => this.model.movePlayer = step;
+        //reset game
+        this.view.toInitialState = () => this.model.reset();
     }
 
     start() {

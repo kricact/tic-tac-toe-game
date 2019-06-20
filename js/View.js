@@ -37,7 +37,12 @@ class View {
                 this.changePlayer();
             });
         });
-
+        let restart = document.querySelectorAll('.game__restart');
+        restart.forEach((currentValue) => {
+            currentValue.addEventListener('click', ()=> {
+                this.reset();
+            });
+        });
     }
 
     updateField (el, player) {
@@ -50,5 +55,23 @@ class View {
     }
 
     onPlayerMove(step) {
+    }
+
+    toInitialState() {
+
+    }
+
+    reset() {
+        console.log(this._field);
+        //remove added class
+        this._field.forEach((currentValue, i) => {
+            currentValue.classList.remove(this._firstPlayer, this._secondPlayer);
+            currentValue.disabled = false;
+        });
+        //remove popup
+        let popupEnd = document.querySelector('.end-game');
+        popupEnd.classList.remove('end-game-show');
+        this.currentPlayer = this._firstPlayer;
+        this.toInitialState();
     }
 }

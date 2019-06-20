@@ -5,6 +5,8 @@ class Model {
         this.field = [0, 0, 0, 0, 0, 0, 0, 0, 0];
         this._amountStrep = 0;
         this.winPlayer = {
+            'namePlayerInitial': 'unknown',
+            'winCombinationInitial': -1,
             'namePlayer': 'unknown',
             'winCombination': -1
         };
@@ -52,5 +54,12 @@ class Model {
         this.field[step['id']] = step['player'];
         this._amountStrep += 1;
         this.checkWin(step['player']);
+    }
+
+    reset() {
+        this.field = [...this._initialField];
+        this._amountStrep = 0;
+        this.winPlayer.namePlayer = this.winPlayer.namePlayerInitial;
+        this.winPlayer.winCombination = this.winPlayer.winCombinationInitial;
     }
 }
