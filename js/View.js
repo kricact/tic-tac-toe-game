@@ -7,7 +7,6 @@ class View {
     }
 
     showEndNotification(winPlayer) {
-        console.log(winPlayer);
         let textEnd = document.querySelector('.end-game__words');
         switch (winPlayer) {
             case 'nobody':
@@ -62,7 +61,6 @@ class View {
     }
 
     reset() {
-        console.log(this._field);
         //remove added class
         this._field.forEach((currentValue, i) => {
             currentValue.classList.remove(this._firstPlayer, this._secondPlayer);
