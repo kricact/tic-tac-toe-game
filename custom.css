@@ -64,3 +64,11 @@ th, td {
 .end-game-show {
     display: block;
 }
+
+.game__restart {
+    width: 30px;
+    height: 30px;
+    background-image: url("img/restart.svg");
+    background-size: contain;
+    background-color: rgba(93, 123, 145, 0);
+}
